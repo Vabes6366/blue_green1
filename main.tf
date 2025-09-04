@@ -76,3 +76,8 @@ resource "azurerm_app_service_source_control_slot" "scm1" {
   repo_url = "https://github.com/Vabes6366/blue_green"
   branch   = "appServiceSlot_Working_DO_NOT_MERGE"
 }
+
+resource "azurerm_web_app_active_slot" "active" {
+  slot_id = azurerm_app_service_slot.slot.id
+
+}
